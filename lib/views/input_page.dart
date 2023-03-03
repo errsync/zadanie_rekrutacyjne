@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zadanie_rekrutacyjne_/views/output_page.dart';
-import 'package:zadanie_rekrutacyjne_/constants/constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 int evenOrOdd(List<int> list) {
   int k = 0;
@@ -51,11 +51,11 @@ class _InputPageState extends State<InputPage> {
               padding: const EdgeInsets.all(20),
               child: TextField(
                 controller: textController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: Constants.HINT_TEXT,
-                  hintStyle: TextStyle(
-                    color: Colors.black,
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  hintText: AppLocalizations.of(context)!.enterNumbers,
+                  hintStyle: const TextStyle(
+                    color: Colors.grey,
                   ),
                 ),
               ),
@@ -70,7 +70,7 @@ class _InputPageState extends State<InputPage> {
                               evenOrOdd(convertToList(textController.text)))),
                 );
               },
-              child: const Text(Constants.SUBMIT_TEXT),
+              child: Text(AppLocalizations.of(context)!.submit),
             )
           ],
         ),

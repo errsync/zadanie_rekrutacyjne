@@ -1,0 +1,10 @@
+{
+  "enterNumbers": "Enter numbers, separating them with a comma",
+  "@enterNumbers": {
+    "description": "Prompt to enter a list of numbers"
+  },
+  "submit": "Submit",
+  "@submit": {
+    "description": "Inscription on the messaging button"
+  }
+}
